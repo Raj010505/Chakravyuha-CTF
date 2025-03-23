@@ -1,0 +1,9 @@
+Correct Password: LTCExCSESAxP0DS
+Flag: PODS{1865A512}
+
+## Obfuscation Techniques Used:
+1. Anti-Debugging with ptrace
+2. Self-Modifying Code
+3. Opaque Predicates
+4. XOR Encrypted Password
+5. SHA-256 Based Flag Generation

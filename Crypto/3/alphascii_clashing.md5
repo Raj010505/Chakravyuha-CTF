@@ -1,0 +1,14 @@
+
+Challenge Name: AlphaSCII Clashing
+
+Description:
+A simple encryption method was used to hide a secret message. Each character was first converted to its ASCII value, modified, 
+and then stored in a hex format. Can you recover the original message?
+
+Encryption Details:
+- Each character's ASCII value was increased by 5.
+- The result was XORed with 42.
+- Finally, the values were converted to hex.
+
+Encrypted Message (Hex Encoded):
+66177a6074aa6c0302726264644e625b6f52474e786f5253125da8

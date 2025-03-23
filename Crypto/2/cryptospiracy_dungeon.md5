@@ -1,0 +1,15 @@
+
+Challenge Name: Cryptospiracy Dungeon
+
+Description:
+A conspiracy theorist claims to have encrypted a secret message using a mysterious combination of XOR, permutation, and shifting techniques. 
+Can you uncover the truth hidden within?
+
+Encryption Details:
+- A pseudo-random key was generated with seed 1337.
+- XOR encryption was applied using this key.
+- The result was then reversed.
+- Finally, each byte was incremented by its index position.
+
+Encrypted Message (Hex Encoded):
+6b4d58b791f32841bc4ee154f910ccca58e10d1005af72fa1fdf99afb87118

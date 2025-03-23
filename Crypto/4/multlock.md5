@@ -1,0 +1,14 @@
+
+Challenge Name: MulTLock
+
+Description:
+A message has been locked behind multiple layers of encryption.
+Can you unlock it?
+
+Encryption Details:
+- Each character's ASCII value was multiplied by 3.
+- The result was XORed with 77.
+- Finally, the values were converted to hex.
+
+Encrypted Message (Hex Encoded):
+98e5ac8214613caa112deb1de150a9dd16410c150d41078411b12611de813a

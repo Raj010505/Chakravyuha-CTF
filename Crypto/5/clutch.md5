@@ -1,0 +1,14 @@
+
+Challenge Name: Clutch
+
+Description:
+A highly secure quantum encryption system was used to lock away a secret message.
+However, something went wrong with the key distribution process. Can you recover the original message?
+
+Encryption Details:
+- A quantum key was generated using a frame-based QKD system.
+- The plaintext was XORed with the generated quantum key.
+- The result was Base64 encoded.
+
+Encrypted Message (Base64 Encoded):
+fjTHOCs8d0CtJ2xHMDR/HKZH1dFOEavavT0X0Q==

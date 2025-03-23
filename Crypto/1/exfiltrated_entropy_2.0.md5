@@ -1,0 +1,15 @@
+
+Challenge Name: Exfiltrated Entropy 2.0
+
+Description:
+We've encrypted a secret message using an LCG-based XOR encryption.
+Can you retrieve the original message?
+
+Encryption Details:
+- LCG Multiplier (a): 0xa1d41ebef9c575ac113fcfd5ac8dbda9
+- LCG Increment (b): 0x8dcf3cf766e0b6c30e753416a70e2367
+- LCG Modulus (m): 0x100000000000000000000000000000000
+- Final LCG State (UUID): 0x46eda76067c4e7f37d3902ee995fcd05
+
+Encrypted Message (Base64 Encoded):
+8wMRlDm8hzmvkYKbVmxBBgo/eDFAjgs=

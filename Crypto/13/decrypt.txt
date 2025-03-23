@@ -1,0 +1,47 @@
+Let’s break down how a solver might approach and solve this ECC challenge step by step. This explanation shows how they would uncover the flag, but you can make it harder by adding more layers of obfuscation!
+🔥 Step 1: Analyze the Program's Output
+
+Running the program gives the following output:
+
+Base point G: (55066263022277343669578718895168534326250603453777594175500187360389116729240, 32670510020758816978083085130507043184471273380659243275938904335757337482424)
+G8KEY{H1GH_0RC_DUNG30N_R@1D}
+
+Clearly, the flag is being printed directly. An experienced CTF player would instantly realize the flag isn’t hidden or encrypted yet — so the first fix is to remove direct flag output.
+🧩 Step 2: Reverse-Engineer the Scalar Multiplication
+
+The core computation happens in scalar_mult():
+
+    The scalar multiplication uses the point GG and a secret scalar kk.
+    A nonlinear entanglement factor (using XOR and a "mask" value) adds complexity, but a solver may notice that these transformations don’t affect the flag logic.
+
+🚀 Step 3: Trace the Flag Condition
+
+The condition that reveals the flag is here:
+
+if (mpz_tstbit(N.x, 8) && mpz_tstbit(N.y, 12)) { // More complex flag condition
+    printf("Secret found!\n");
+}
+
+Solvers will:
+
+    Understand mpz_tstbit(): It checks whether a specific bit is set.
+    Realize the bit conditions: The program checks if the 8th bit of N.xN.x and the 12th bit of N.yN.y are set.
+
+What can they do?
+
+    They can manipulate the scalar kk to find points N.xN.x and N.yN.y that satisfy these conditions.
+    Since kk starts from nn, they might try altering nn or tracing how the mask evolves.
+
+🔍 Step 4: Debugging and Extracting the Flag
+
+Once they realize the flag check is simple:
+
+    They can either brute-force values for kk until the condition is satisfied.
+    Or, they can print intermediate values of N.xN.x and N.yN.y to see when the bits align.
+    Hacky method: Just scan the code and see the flag hardcoded as:
+
+const char *FLAG = "G8KEY{H1GH_0RC_DUNG30N_R@1D}";
+
+A solver might immediately spot this if they skim through the code.
+
+
